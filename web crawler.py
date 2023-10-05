@@ -9,9 +9,9 @@ base_url = "https://www.kemenperin.go.id/direktori-perusahaan?what=&prov=&hal="
 all_data = []
 
 # Ketikan halaman pertama dan terakhir dalam kolom range dipisahkan tanda koma
-for page_number in range(1, 2692):
+for page_number in range(1001, 2692):
     # Buat URL lengkap dengan nomor halaman
-    url = f"{base_url}/page/{page_number}"
+    url = f"{base_url}{page_number}"
 
     # Kirim permintaan HTTP
     response = requests.get(url)
@@ -45,7 +45,7 @@ for page_number in range(1, 2692):
 # Sekarang, all_data berisi data dari semua halaman
 
 # Simpan data ke dalam file CSV
-csv_filename = "direktori_perusahaan.csv"
+csv_filename = "data_kemeperin.csv"
 
 with open(csv_filename, mode="w", newline="", encoding="utf-8") as csv_file:
     fieldnames = ["Kolom1", "Kolom2", "Kolom3"]  # Gantilah dengan nama kolom yang sesuai
