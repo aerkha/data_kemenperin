@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import csv
 
 # URL awal
-base_url = "https://www.kemenperin.go.id/direktori-perusahaan?what=&prov=&hal="
+base_url = "alamat web"
 
 # Inisialisasi list untuk menyimpan data dari semua halaman
 all_data = []
 
 # Ketikan halaman pertama dan terakhir dalam kolom range dipisahkan tanda koma
-for page_number in range(1001, 2692):
+for page_number in range(1, 100):
     # Buat URL lengkap dengan nomor halaman
     url = f"{base_url}{page_number}"
 
@@ -45,7 +45,7 @@ for page_number in range(1001, 2692):
 # Sekarang, all_data berisi data dari semua halaman
 
 # Simpan data ke dalam file CSV
-csv_filename = "data_kemeperin.csv"
+csv_filename = "data_perusahaan.csv"
 
 with open(csv_filename, mode="w", newline="", encoding="utf-8") as csv_file:
     fieldnames = ["Kolom1", "Kolom2", "Kolom3"]  # Gantilah dengan nama kolom yang sesuai
