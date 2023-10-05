@@ -2,13 +2,13 @@ import googlemaps
 import pandas as pd
 
 # Gantilah 'YOUR_API_KEY' dengan kunci API Google Maps Anda yang sebenarnya
-api_key = 'AIzaSyDL9PJ7oQfz88M_KesYBy7MnLdjGl7zgg4'
+api_key = 'YOUR_API_KEY'
 
 # Inisialisasi klien Google Maps
 gmaps = googlemaps.Client(api_key)
 
 # Membaca daftar perusahaan dari file Excel
-df = pd.read_excel('C:\\Users\\zeduna\\Documents\\Indosat\\perusahaan.xlsx')
+df = pd.read_excel('lokasi file.xlsx')
 
 # Kolom yang berisi nama perusahaan dalam file Excel Anda
 nama_perusahaan_column = 'Nama Perusahaan'
